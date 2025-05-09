@@ -2,7 +2,8 @@
 
 echo "=== System is upgrading ==="
 
-sudo apt update && sudo apt upgrade -y
+sudo apt update
+sudo apt upgrade -y
 
 
 # Firewall install && config
@@ -14,21 +15,17 @@ sudo ufw default deny incoming
 sudo ufw default allow outgoing
 sudo ufw enable
 
-check()
-
 # Install some Linux tools
 
 echo "=== Tools installing ==="
 
 sudo apt install -y build-essential git curl wget htop net-tools unzip gpg neofetch htop tree openssh-client openssh-server openssh-sftp-server rsync gparted gvfs-backends vlc
 
-check()
-
 # Dev Tools
 
 echo "=== Initialize devoloper environment ==="
 
-sudo apt install python3 python3-pip python3-venv
+sudo apt install -y python3 python3-pip python3-venv
 
 # Vscode
 
@@ -40,5 +37,3 @@ rm -f packages.microsoft.gpg
 sudo apt install apt-transport-https
 sudo apt update
 sudo apt install code
-
-check()
