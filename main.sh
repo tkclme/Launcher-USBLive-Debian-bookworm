@@ -6,7 +6,7 @@
 set -e
 
 ./scripts/update.sh
-.scripts/config_lang.sh
+./scripts/config_lang.sh
 ./scripts/config_user.sh
 
 until [ "$reboot" = "n" ]
