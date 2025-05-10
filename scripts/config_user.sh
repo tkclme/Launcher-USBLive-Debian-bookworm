@@ -2,13 +2,6 @@
 
 echo "user name: " ; read name
 echo "email: " ; read email
-whoami old_user
-
-# Changement de nom d'utilisateur
-
-sudo usermod --login $name $user
-sudo usermod --login $name --move-home --home /home/$name $old_user
-sudo passwd $name
 
 # Configuration Git
 
